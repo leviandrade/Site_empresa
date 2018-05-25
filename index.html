@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Login e senha</title>
+	<style>
+	h1{
+		text-align:center;
+	}
+	body{
+		background-color:#FFFFF0;
+		height:100%
+	}
+	#login{
+		margin-top:150px;
+	}
+	.p1{
+		font-size:18px;
+		text-align:center;
+	}
+	#senha{
+		margin-left:8px;
+		size:10px;
+	}
+	#nome{
+		margin-left:12px
+	}
+	.p2{
+		font-size:13px;
+		color:red;
+	}
+	.botao{
+		width:140px;
+		height:35px;
+		border-radius:20px;
+		color:white;
+		border-color:transparent;
+		cursor:pointer;
+		background-image:linear-gradient(to right,#8B0000,#EE5C42)
+	}
+	#limpa:hover{background-color:#dddddd;}
+	.campo{
+		border: 1px solid #000000;
+		width:300px;
+		height:30px;
+		border-radius:4px;
+		padding-left:5px;
+	}
+	#div1{
+		text-align:center
+	}
+	h3{
+		text-align:center
+	}
+	
+	#inf{
+		position:absolute;
+		border:1px solid;
+		margin:auto;
+		width:230px;text-align:justify;padding:10px;
+	}
+	ol{margin-left:-20px;}
+	</style>
+	
+	<script>
+	function go()
+	{
+		var nome1="levi";
+		var senha1="1234";
+		var nome=document.getElementById("nome").value;
+		var senha=document.getElementById("senha").value;
+		var valor = document.login.senha.value;
+		while(valor.indexOf(".") >= 0) 
+		{
+			var novoValor = valor.replace(".","");
+		}
+		valor = novoValor;
+		if (nome1==nome && senha1==senha )
+		{
+			location.href="home.html"}
+		else if (document.getElementById("nome").value!=nome1)
+		{
+			alert("NOME INCORRETO");
+			document.getElementById("nome").value="";
+			document.login.nome.focus( ) ;
+		}
+		else if(document.getElementById("senha").value!=senha1)
+		{
+			alert("SENHA INCORRETA");
+			document.getElementById("senha").value="";
+			document.login.senha.focus( ) ;
+		}
+		else
+		{
+			document.login.nome.focus( ) ;
+
+		}
+	}
+
+	
+	function foco(){
+	document.getElementById("nome").focus();
+
+	}
+
+	
+	</script>
+</head>
+<body onload="foco()">
+
+<div id="esquerda">
+<h1>Bem vindo ao site do Levi</h1>
+
+	<div id="inf">
+		<h3>Informações</h3>
+		<ol>
+			<li>O objetivo do site é mostrar habilidades com Html,Css e JavaScript.</li><br/>
+			<li>No formulário o código em JavaScript que faz a validação está comentado, para que não se precise preencher todos os campos corretamente, poupando tempo para quem for avaliar.</li><br/>
+			<li>Esse login é meramente ilustrativo</li><br/>
+		</ol>
+	</div>
+	<h3>Para ter acesso a página principal digite o login e senha!</h3>
+	<form name="login" id="login" action="" method="post"  onReset= "return confirm('Limpa?');">
+		<p class="p1">Digite seu login: <input type="text" class="campo" name="nome" id="nome"placeholder="&#9998;"><span class="p2">* login = levi</span></p>
+		<p class="p1">Digite sua senha : <input type="password" class="campo" name="senha" id="senha" placeholder="&#9998;"><span class="p2">* senha = 1234</span></p>
+	</form>
+	<br><br>
+	<div id="div1"><input type="button" name="botao" class="botao" value="Entrar" onclick="go()"/>
+		<button class="botao" id="limpa" onclick="login.reset( );" >Limpar</button>
+	</div>
+</div>
+</body>
+
+</html>
