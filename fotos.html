@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Desenvolvimento LTDA</title>
+	<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANKSURBVGhD7dnZy01RHMbxYx7LEJm5UJLkRvgXKCQhxYULlEwZ4oZyY/wDlOkKyY0yZ0iGolwokulG5MIQCkkZv8/LqtX2W/vstc8+e7+nzlOfdN6z3rXX7917r73WVmsnf3r++7elMhYbcQc/cAvrMAqdNv6gf+G34Sc6VTFZBh1SWTFjsAF5Bh3iFzMShWcwNOjbKGrQISrmJtZiAArJaVgHa7ajKCQ6vdYBmu0cCkm7gJyaWsB7rExxEX7747DaOX5bp6kFvEBadsNvvwpp8ds6hRUwF1txEBq4Om+pAvx0xRLc6/gUTuUFDMdyHMEFnMU2jICih8w47McVw3P4g3kMq53jt3VyFdANe/EVVqefMA86E4qWy+dhtW1UrgJOwuos6Q1WQOmFJ7DaNSK6gJmwOkqzEEpfDPJsgt9On/3vk/y2TnQBZ2B1lOYhrOim9duVchO/hdVRPcOQTOkF9IHVSRaToPSDuyRKv4Q0LVqdZDEDig5ofZ9XVAGaPr/B6qget4u6Aev7vKLvgQewOkqj50IXKFqwuQeTHlx+u1IeZFdhdZTmOqyUfhNriaD9qNVRmo/ojmRKL2AKrE6yGI1kSi9Aaxu3VI6hNZOmYGUZ3AZF94PfrpQNzSLEvjbZAmU6rO8bEV2AcgJWZxa9J9IMJMktZBFyFaCHUtazoFOvaAJIXhKVXEIu2g9YHfq0I0t7dV76TexHl8QlWJ2KFn31XshWWoCyB1anoneX9VJ5AToLs6DH/HfoIac30kvRAy5DoZnoMvylQSVLCUXPgwWY3PHpb/pDA3XRvK85323wlfHYidewBpNHVAFaTq/BI+iX9RfXDm0O3GJtAnRpaT+sNp9xAFPhoq2l3iF9gD+YPDIVoCXEIXyB1YnojOivnrZju4/VUAGKXstcg9U2q9QChuAYssz5pzA78bMQXUKLoWia1Tslq10WwQImImbdoyVGb7zyflbPPigD8RJWm3rMAnRDPoP1Cxb9Rd1LrO2w2oToCavohtc9EeMdtI/+L5thHSzkMFy0ebfahGgQbqVaWO7COljIerhoNordN89HodHUZx0oJDmAp7DahexAodkF60kY4l6ZuOj/CKx2Fs1A09BOi6dW+wNnwT5Y+qOPSwAAAABJRU5ErkJggg=="/>
+	<link rel="stylesheet" type="text/css" href="formata.css"/>
+	<script>
+	function mudafoto(foto)
+	{
+		document.getElementById("icone").src=foto;
+		
+	}
+	</script>
+	<style>
+	#galeria{
+	width:700px;
+	margin:0 auto;
+	padding:50px;
+	overflow:hidden;
+	list-style:none;
+	}
+	#galeria li{
+	float:left;
+	width:200px;
+	height:200px;
+	margin:10px;
+	border:5px solid #4F4F4F;
+	background-color:white;
+	box-shadow:1px 1px 3px rgba(0,0,0,.4);
+	-webkit-transition:all .3s ease-in;
+	}
+	
+	#galeria li span{
+		opacity:0;
+		color:white;
+		text-shadow:1px 1px 1px #000000;
+		background-color:rgba(0,0,0,.3);
+		font:12px;
+		line-height:370px;
+		padding:5px;
+		margin-left:10px;
+	}
+	
+	#galeria li:hover{
+		-webkit-transform:scale(1.5);
+	}
+	#galeria li:hover span{
+		opacity:1;
+	}
+	#foto1{
+	background:url('ibm.png');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto1:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto2{
+		background:url('microsoft.png');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto2:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto3{
+		background:url('dell.png');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto3:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto4{
+	background:url('apple.jpg');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto4:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto5{
+	background:url('netflix.jpg');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto5:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto6{
+	background:url('disney.jpg');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto6:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto7{
+	background:url('coca.jpg');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto7:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto8{
+	background:url('pepsi.png');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto8:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#foto9{
+	background:url('facebook.jpg');
+	background-position:50% 50%;
+	background-size:300px 300px;
+	background-color:white;
+	}
+	#foto9:hover{
+		background-position:0px 0px;
+		background-size:200px 200px;
+	}
+	#patrocinio{
+		text-align:center;
+	}
+	</style>
+	</head>
+<body>
+<div id="interface">
+<nav id="menu">
+<h1>Menu principal</h1>
+	<ul>
+		<li onmouseover="mudafoto('home.png')" onmouseout="mudafoto('foto.png')"><a href="home.html">Home</a></li>
+		<li onmouseover="mudafoto('curso.png')" onmouseout="mudafoto('foto.png')"><a href="cursos1.html">Cursos</a></li>	
+		<li onmouseover="mudafoto('foto.png')" onmouseout="mudafoto('foto.png')"><a href="fotos.html">fotos</a></li>
+		<li onmouseover="mudafoto('formulario.png')" onmouseout="mudafoto('foto.png')"><a href="formulario.html">Fale Conosco</a></li>
+	</ul>
+</nav>
+	<header id="cabecalho">
+	<hgroup><br/>
+	<h1>Empresa de TI</h1>
+	<h2>A maior empresa de tecnologia do Brasil</h2>
+	</hgroup>
+	<img id="icone" src="home.png"/>
+</header>
+
+	<h1 id="patrocinio">Patrocinadores</h1>
+
+<ul id="galeria">
+<li id="foto1"><span>R$ 90 milhões</span></li>
+<li id="foto2"><span>R$ 50 milhões</span></li>
+<li id="foto3"><span>R$ 20 milhões</span></li>
+<li id="foto4"><span>R$ 120 milhões</span></li>
+<li id="foto5"><span>R$ 12 milhões</span></li>
+<li id="foto6"><span>R$ 4 milhões</span></li>
+<li id="foto7"><span>R$ 14 milhões</span></li>
+<li id="foto8"><span>R$ 47 milhões</span></li>
+<li id="foto9"><span>R$ 200 milhões</span></li>
+
+
+</ul>
+
+
+<footer id="rodape">
+<p>&copy;Levis_maciel@hotmail.com <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018</p>
+</footer>
+</div>
+</body>
