@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Desenvolvimento LTDA</title>
+	<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANKSURBVGhD7dnZy01RHMbxYx7LEJm5UJLkRvgXKCQhxYULlEwZ4oZyY/wDlOkKyY0yZ0iGolwokulG5MIQCkkZv8/LqtX2W/vstc8+e7+nzlOfdN6z3rXX7917r73WVmsnf3r++7elMhYbcQc/cAvrMAqdNv6gf+G34Sc6VTFZBh1SWTFjsAF5Bh3iFzMShWcwNOjbKGrQISrmJtZiAArJaVgHa7ajKCQ6vdYBmu0cCkm7gJyaWsB7rExxEX7747DaOX5bp6kFvEBadsNvvwpp8ds6hRUwF1txEBq4Om+pAvx0xRLc6/gUTuUFDMdyHMEFnMU2jICih8w47McVw3P4g3kMq53jt3VyFdANe/EVVqefMA86E4qWy+dhtW1UrgJOwuos6Q1WQOmFJ7DaNSK6gJmwOkqzEEpfDPJsgt9On/3vk/y2TnQBZ2B1lOYhrOim9duVchO/hdVRPcOQTOkF9IHVSRaToPSDuyRKv4Q0LVqdZDEDig5ofZ9XVAGaPr/B6qget4u6Aev7vKLvgQewOkqj50IXKFqwuQeTHlx+u1IeZFdhdZTmOqyUfhNriaD9qNVRmo/ojmRKL2AKrE6yGI1kSi9Aaxu3VI6hNZOmYGUZ3AZF94PfrpQNzSLEvjbZAmU6rO8bEV2AcgJWZxa9J9IMJMktZBFyFaCHUtazoFOvaAJIXhKVXEIu2g9YHfq0I0t7dV76TexHl8QlWJ2KFn31XshWWoCyB1anoneX9VJ5AToLs6DH/HfoIac30kvRAy5DoZnoMvylQSVLCUXPgwWY3PHpb/pDA3XRvK85323wlfHYidewBpNHVAFaTq/BI+iX9RfXDm0O3GJtAnRpaT+sNp9xAFPhoq2l3iF9gD+YPDIVoCXEIXyB1YnojOivnrZju4/VUAGKXstcg9U2q9QChuAYssz5pzA78bMQXUKLoWia1Tslq10WwQImImbdoyVGb7zyflbPPigD8RJWm3rMAnRDPoP1Cxb9Rd1LrO2w2oToCavohtc9EeMdtI/+L5thHSzkMFy0ebfahGgQbqVaWO7COljIerhoNordN89HodHUZx0oJDmAp7DahexAodkF60kY4l6ZuOj/CKx2Fs1A09BOi6dW+wNnwT5Y+qOPSwAAAABJRU5ErkJggg==">
+	<link rel="stylesheet" type="text/css" href="formata.css"/>
+	<script>
+	function mudafoto(foto)
+	{
+		document.getElementById("icone").src=foto;
+		
+	}
+		
+	
+	</script>
+	<style>
+	#formu{text-align:center}
+	form{
+		font-family:arial;
+		width:600px;
+		margin:auto;
+		margin-bottom:20px;
+	}
+	input,textarea{
+		font-family:sans-serif;
+		font-weight:normal;
+		font-size:18px;border-radius:3px;border-color:black;
+	}
+	input:hover, textarea:hover{
+		background-color:#dddddd;
+	}
+	legend{
+		color:#888888;
+		font-weight:bold;
+		font-size:18px;
+	}
+	fieldset{
+		margin:10px;
+	}
+	#seguir{
+	margin-left:200px;
+	margin-top:30px;
+	width:200px;
+	height:35px;
+	border-radius:20px;
+	color:white;
+	border-color:transparent;
+	cursor:pointer;
+}
+#seguir{background-image:linear-gradient(to right,#8B0000,#EE5C42);}
+#cestado{height:26px;border-radius:3px;border-color:black;width:115px;}
+textarea{height:150px;}
+#cdata{width:165px;}
+
+	</style>
+	
+	<script>
+	/*
+	function validaForm() {
+	 if(document.getElementById("cnome").value.length < 3)
+	 {
+		alert("Digite um nome válido");
+		document.getElementById("cnome").style.border = "1px solid #ef3c59";
+		document.getElementById("cnome").focus();
+		return false;
+	 }
+	 if(document.getElementById("ccpf").value.length < 11)
+	{
+		alert("Digite um cpf válido");
+		document.getElementById("ccpf").style.border = "1px solid #ef3c59";
+		document.getElementById("ccpf").focus();
+		return false;
+	}
+	 if(document.getElementById("cemail").value.indexOf("@") == -1 || document.getElementById("cemail").valueOf.indexOf(".") == -1 || document.getElementById("cemail").value.value == "") 
+		{
+        alert("Por favor, indique um e-mail válido.");
+		document.getElementById("cemail").style.border = "1px solid #ef3c59";
+        document.getElementById("cemail").focus();
+		return false;
+
+        
+    }
+
+	 if(document.getElementById("ctel").value.length < 8)
+	{
+		alert("Digite um telefone válido");
+		document.getElementById("ctel").style.border = "1px solid #ef3c59";
+		document.getElementById("ctel").focus();
+		return false;
+	}
+	 if(document.getElementById("crua").value=="")
+	{
+		alert("Digite um telefone válido");
+		document.getElementById("crua").style.border = "1px solid #ef3c59";
+		document.getElementById("crua").focus();
+		return false;
+	}
+	 if(document.getElementById("cnum").value=="")
+	{
+		alert("Digite um telefone válido");
+		document.getElementById("cnum").style.border = "1px solid #ef3c59";
+		document.getElementById("cnum").focus();
+		return false;
+	}
+
+	 if(document.getElementById("cmsg").value.length >150)
+	{
+		alert("Maximo de 150 caracteres");
+		document.getElementById("cmsg").value.focus();
+		return false;
+
+	}
+	
+	 }*/
+	</script>
+	</head>
+<body>
+<div id="interface">
+<nav id="menu">
+<h1>Menu principal</h1>
+	<ul>
+		<li onmouseover="mudafoto('home.png')" onmouseout="mudafoto('formulario.png')"><a href="home.html">Home</a></li>
+		<li onmouseover="mudafoto('curso.png')" onmouseout="mudafoto('formulario.png')"><a href="cursos1.html">Cursos</a></li>	
+		<li onmouseover="mudafoto('foto.png')" onmouseout="mudafoto('formulario.png')"><a href="fotos.html">fotos</a></li>
+		<li onmouseover="mudafoto('formulario.png')" onmouseout="mudafoto('formulario.png')"><a href="formulario.html">Fale Conosco</a></li>
+	</ul>
+</nav>
+	<header id="cabecalho">
+	<hgroup><br/>
+	<h1>Empresa de TI</h1>
+	<h2>A maior empresa de tecnologia do Brasil</h2>
+	</hgroup>
+	<img id="icone" src="curso.png"/>
+</header>
+<h1 id="formu">Formulário</h1>
+<form method="post" id="fcontato"  action="tela2.html" onsubmit="return validaForm();" >
+<fieldset id="usuario"><legend>Identificação do usuário</legend>
+<p><label for="cnome">Nome :</label> <input type="text" name="tnome" id="cnome" size="26" maxlength="30" placeholder="  Nome Completo"/></p>
+<p><label for="ccpf">Cpf :</label> <input type="text"  name="tcpf" id="ccpf" placeholder="  999.999.999-99" size="28" maxlength="30"/></p>
+<p><label for="cemail">E-mail :</label> <input type="email"  name="temail" id="cemail" size="26" maxlength="40" placeholder="  &#9993;"/></p>
+<p><label for="ctel">Telefone :</label> <input type="tel"   name="ttel" id="ctel" placeholder="  &#9742;"  size="24" maxlength="30"/></p>
+<p><label for="cdata">Data de Nascimento :</label><input type="date"  name="tdata" id="cdata" size="11" /></p>
+<p><label for="cestado">Estado :</label><select name="estado" id="cestado">
+<option>Acre(AC)</option>
+<option>Alagoas(AL)</option>
+<option>Amapá(AP)</option>
+<option>Amazonas(AM)</option>
+<option>Bahia(BA)</option>
+<option>Ceará(CE)</option>
+<option>Distrito Federal(DF)</option>
+<option>Espirito Santo(ES)</option>
+<option>Goiás(GO)</option>
+<option>Maranhão(MA)</option>
+<option>Mato Grosso(MT)</option>
+<option>Mato Grosso do Sul (MS)</option>
+<option>Minas Gerais(MG)</option>
+<option>Paraíba(PB)</option>
+<option>Paraná(PR)</option>
+<option>Pernambuco(PE)</option>
+<option>Piauí(PI)</option>
+<option>Rio de Janeiro(RJ)</option>
+<option>Rio Grande do Norte(RN)</option>
+<option>Rio Grande do Sul(RS)</option>
+<option>Rondônia(RO)</option>
+<option>Roraima(RR)</option>
+<option>Santa Catarina(SC)</option>
+<option>São Paulo(SP)</option>
+<option>Sergipe(SE)</option>
+<option>Tocantins(TO)</option>
+
+</select>
+</fieldset><br/>
+
+</p>
+<br/>
+
+<fieldset id="mensagem"><legend>Mensagem do usuário</legend>
+<!--<p><label for="cgrau">Grau de Urgência : </label>Min<input type="range" name="grau"id="cgrau" min="1" max="10"/>Máx</p> !-->
+<div class="box">
+					<label for="arquivo"><div class="upload"><label for="arquivo">
+						<p><input type="file" name="" id="arquivo"/></p>
+					</div>
+					<h4 class="h4">Upload de arquivos,pode ser foto ou documentos</h4>
+					</label>
+				</div>
+<p>
+<label for="cmsg">Mensagem : </label><textarea id="cmsg"" cols="30" rows="10" id="coment" 
+       name="coment"></textarea>
+</p>
+				
+</fieldset>
+<input type="submit" id="seguir"  value="        SEGUIR      &#10132"  />
+</form>
+<style>
+.box{margin-left:175px;
+	width:200px;height:150px;
+	background-color:#F8F8FF;
+	border:dashed;
+	border-radius:5px;
+	border-color:#87CEEB;margin-top:15px;
+	}
+	p{cursor:pointer;}
+	.upload{background-image: url('imagem.png');
+width:26px; margin-left:45%;margin-top:15%;
+height:26 px;
+}
+input[type="file"]{
+width:26px;
+height:26px;
+opacity:0;
+}
+.h4{text-align:center;cursor:pointer;}
+
+</style>
+
+
+
+
+
+<footer id="rodape">
+<p> &copy;	Levis_maciel@hotmail.com <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018</p>
+</footer>
+</div>
+</body>
