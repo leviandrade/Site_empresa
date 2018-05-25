@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8"/>
+	<title>Desenvolvimento LTDA</title>
+	<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANKSURBVGhD7dnZy01RHMbxYx7LEJm5UJLkRvgXKCQhxYULlEwZ4oZyY/wDlOkKyY0yZ0iGolwokulG5MIQCkkZv8/LqtX2W/vstc8+e7+nzlOfdN6z3rXX7917r73WVmsnf3r++7elMhYbcQc/cAvrMAqdNv6gf+G34Sc6VTFZBh1SWTFjsAF5Bh3iFzMShWcwNOjbKGrQISrmJtZiAArJaVgHa7ajKCQ6vdYBmu0cCkm7gJyaWsB7rExxEX7747DaOX5bp6kFvEBadsNvvwpp8ds6hRUwF1txEBq4Om+pAvx0xRLc6/gUTuUFDMdyHMEFnMU2jICih8w47McVw3P4g3kMq53jt3VyFdANe/EVVqefMA86E4qWy+dhtW1UrgJOwuos6Q1WQOmFJ7DaNSK6gJmwOkqzEEpfDPJsgt9On/3vk/y2TnQBZ2B1lOYhrOim9duVchO/hdVRPcOQTOkF9IHVSRaToPSDuyRKv4Q0LVqdZDEDig5ofZ9XVAGaPr/B6qget4u6Aev7vKLvgQewOkqj50IXKFqwuQeTHlx+u1IeZFdhdZTmOqyUfhNriaD9qNVRmo/ojmRKL2AKrE6yGI1kSi9Aaxu3VI6hNZOmYGUZ3AZF94PfrpQNzSLEvjbZAmU6rO8bEV2AcgJWZxa9J9IMJMktZBFyFaCHUtazoFOvaAJIXhKVXEIu2g9YHfq0I0t7dV76TexHl8QlWJ2KFn31XshWWoCyB1anoneX9VJ5AToLs6DH/HfoIac30kvRAy5DoZnoMvylQSVLCUXPgwWY3PHpb/pDA3XRvK85323wlfHYidewBpNHVAFaTq/BI+iX9RfXDm0O3GJtAnRpaT+sNp9xAFPhoq2l3iF9gD+YPDIVoCXEIXyB1YnojOivnrZju4/VUAGKXstcg9U2q9QChuAYssz5pzA78bMQXUKLoWia1Tslq10WwQImImbdoyVGb7zyflbPPigD8RJWm3rMAnRDPoP1Cxb9Rd1LrO2w2oToCavohtc9EeMdtI/+L5thHSzkMFy0ebfahGgQbqVaWO7COljIerhoNordN89HodHUZx0oJDmAp7DahexAodkF60kY4l6ZuOj/CKx2Fs1A09BOi6dW+wNnwT5Y+qOPSwAAAABJRU5ErkJggg=="/>
+	<link rel="stylesheet" type="text/css" href="formata.css"/>
+	<script>
+	function mudafoto(foto)
+	{
+		document.getElementById("icone").src=foto;
+		
+	}	
+
+</script>
+
+<script>
+	var img=document.getElementById('img1');
+	var images=['php.png','csharp.png','cmais.png','javascript.png','python.png','java.png'];
+	var x=0;
+	function slide(){
+		if (x<images.length){
+		x=x+1;
+		}
+		else{
+			x=1;
+		}
+		img.innerHTML="<img src="+images[x-1]+">";
+	}
+	setInterval(slide,2000);
+	
+	function slide1(){
+		document.getElementById('img1').src="imagem1.png";
+		setTimeout("slide2()", 1000)
+	}
+ 
+	function slide2(){
+		document.getElementById('img1').src="imagem2.png";
+		setTimeout("slide3()", 1000)
+	}
+ 
+	function slide3(){
+		document.getElementById('img1').src="imagem3.png";
+	setTimeout("slide1()", 1000)
+	}
+		
+</script>
+</head>
+<body onload="slide1()">
+
+<div id="interface">
+	<nav id="menu">
+		<h1>Menu principal</h1>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li onmouseover="mudafoto('curso.png')" onmouseout="mudafoto('home.png')"><a href="cursos1.html">Cursos</a></li>	
+				<li onmouseover="mudafoto('foto.png')" onmouseout="mudafoto('home.png')"><a href="fotos.html">fotos</a></li>
+				
+				<li onmouseover="mudafoto('formulario.png')" onmouseout="mudafoto('home.png')"><a href="formulario.html">Fale Conosco</a></li>
+			</ul>
+	</nav>
+	<header id="cabecalho">
+		<hgroup><br/>
+			<h1>Empresa de TI</h1>
+			<h2>A maior empresa de tecnologia do Brasil</h2>
+		</hgroup>
+		<img id="icone" src="home.png"/>
+	</header>
+
+<article id="artigo">
+<section id="esquerda">
+	<hgroup>
+	<h1 id="primeiro">Desenvolvimento Web</h1>
+	<h4 class="levi">Por Levi Andrade</h4>
+	<h5 class="levi">Atualizado em 20/04/2018</h5>
+	<h1 id="segundo">Quem Somos?</h1>
+	<p>Desenvolvemos soluções de tecnologia e telecomunicações para pequenas, médias e grandes empresas, além de administramos áreas de telecom para eventos, condomínios comerciais e residenciais, hotéis, shoppings e centro de convenções.Possuímos e operamos com plataforma multiserviços baseada em tecnologia IP, desenvolvida por uma equipe de engenharia própria, com o objetivo de fornecer soluções customizadas para empresas em diferentes segmentos e atividades. Já em telefonia fixa, operamos com plataforma NGN, referência de mercado de Telecom, adotada pelas grandes empresas de telecomunicações globais.Além disso oferecemos diversos cursos para seu aprimoramento profissional</p><br/>
+	<figure class="imagem">
+		<img src="tecnologia.jpg" />
+		<figcaption>
+			<h4 id="txt1">Tecnologia da Informação</h4>
+		</figcaption>
+	</figure><br/>
+<h1 id="terceiro">Funcionários</h1><br/><br/><br/>
+	<div id="tab">
+		<table id="tabela">
+			<tr><td class="tabesq"><span class="spa1">Chefe</span></td><td class="tabdir"><span class="spa">Levi Andrade Maciel</span></td></tr>
+			<tr><td class="tabesq"><span class="spa1">Gerente</span></td><td class="tabdir"><span class="spa">Levi Andrade Maciel</span></td></tr>
+			<tr><td class="tabesq" rowspan="3"><span class="spa1">Programadores</span></td><td class="tabdir"><span class="spa">Levi Andrade Maciel</span></td></tr>
+			<tr><td class="tabdir"><span class="spa">Julio</span></td></tr>
+			<tr><td class="tabdir"><span class="spa">Patricia</span></td></tr>
+			<tr><td class="tabesq" rowspan="4"><span class="spa1">Estagiários</td><td class="tabdir"><span class="spa">Levi Andrade Maciel</span></td></tr>
+			<tr><td class="tabdir"><span class="spa">Roberta</span></td></tr>
+			<tr><td class="tabdir"><span class="spa">Silvia</span></td></tr>
+			<tr><td class="tabdir"><span class="spa">Pedro</span></td></tr>
+		</table>
+	</div>
+
+<br/><br/><br/>
+
+<h1 id="quarto">Nossos softwares</h1>
+	<p>Usamos os mais modernos softwares em nossos sistemas e desenvolvemos aplicações para nossos usuarios em C#,PHP,Java e Python.Focamos na qualidade de nossos sistemas e na satisfação de nossos clientes com uma taxa de aproximadamente 95%.</p><br/><br/>
+
+<img id="img1"src="imagem1.png" />
+<br/><br/>
+
+	</hgroup>
+</section>
+<aside id="lateral" onLoad="comeco();regular()">
+	<style>
+	#fale{
+		margin-top:0px;color:red;font-size:23px;
+	}
+	</style>
+
+	<p id="fale">Fale Comigo:Levis_maciel@hotmail.com</p>
+
+
+
+
+
+
+ <script>
+ 
+	var a;
+	var b;
+	var c;
+	var p=Math.round( Math.random( ) * 10);
+	function erro(){
+		a = document.getElementById("pes").value;
+		b = document.getElementById("pes1").value;
+		c = document.getElementById("pes2").value;
+		if(a=="" || b=="" || c==""){
+			alert("Preencha todos os Campos");
+		}
+		else if (a==p || b==p || c==p ){
+			num.innerHTML="PARABÉNS VOCÊ ACERTOU " +p;
+			num.style.color="green";
+		}
+		else{ 
+			num.innerHTML="Você errou o numero gerado foi "+p;
+			num.style.color="red";
+		}
+   }
+   
+   
+	function limpa(){
+		document.getElementById('pes').value="";
+		document.getElementById('pes1').value="";
+		document.getElementById('pes2').value="";
+		num.innerHTML="";
+		document.jogo.pes.focus() ;
+		p=p=Math.round( Math.random( ) * 10);;
+	}
+   
+   </script>
+   
+   <style>
+	#numero{
+		background-color:#E8E8E8;
+		border-style:solid;
+		width:474px;
+		margin-top:20px;
+		border-radius:12px;
+		border-color:#708090;
+		margin-left:8px;
+	}
+	
+   p{
+		margin-left:15px;
+   }
+   
+	button{
+		background-color:blue;
+	}
+	#numero1{
+		text-align:center;
+	}
+	.botao{
+		width:140px;
+		height:35px;
+		background-color:black;
+		border-style:ridge;
+		border-radius:5px;
+		font-size:12px;
+		color:white;
+		cursor:pointer;
+		margin-top:20px;
+	}
+	.botao:hover{		background-color:#363636
+
+}
+	#alinha{
+		margin-left:59px;
+	}
+	#num{
+		text-align:center;
+		font-size:26px;
+	}
+	.campo{
+		border: 1px solid #000000;
+		width:90px;
+		height:25px;
+		border-radius:4px;
+		padding-left:5px;
+	}
+	 </style>
+<h1 id="quinto">Jogos</h1>
+<div id="numero">
+<h1 id="numero1">Acerte O número entre 0 e 10</h1>
+
+<form name="jogo" id="jogo" action="" method="post">
+   <p>A : <input class="campo" id="pes" size="10"/>
+   B :<input class="campo" id="pes1" size="10"/>
+    C : <input class="campo" id="pes2" size="10"/></p></form>
+	<div id="alinha">
+   <p><input  type="button"  value="JOGAR" class="botao"  
+        onclick="erro();" />
+		<input type="button" value="TENTAR NOVAMENTE" class="botao" onClick="limpa()"></p></div>
+</p><input type="button" class="regra"  value="REGRAS DO JOGO "/>
+	<p id="b"><h2 id="num"></h2></p>
+
+</div>
+
+ <script>
+
+	var cont = new Number();
+	var cont = 11;
+	var nume1=Math.round( Math.random( ) * 100);
+	var nume2=Math.round( Math.random( ) * 100);
+	var nume3=Math.round( Math.random( ) * 100);
+	var d=(nume1*nume2)+nume3;
+	function result(){
+		num1.innerText=nume1 + " x ";
+		num2.innerText=nume2+ " + ";
+		num3.innerText=nume3;
+	}
+ function start(){
+		denovo.disabled=false;
+		document.jogo1.texto.focus() ;
+   if ((cont - 1) >= 0){
+    cont -= 1;
+    if (cont == 0) {
+	 	texto.disabled=true;
+		cont="Tempo esgotado Resultado: "+d;
+		tempo.style.color="red";
+				
+    }
+    tempo.innerText=cont;
+    setTimeout('start();', 1000);
+	denovo.disabled=true;
+   }
+ }
+ 
+ function verifica(){
+	r = document.getElementById("texto").value;
+	if(r==""){
+		alert("Clique em Iniciar Jogo!");
+	}
+	else if(r==d){
+		cont=0;
+		tempo.innerHTML="PARABÉNS VOCÊ ACERTOU " +d;
+		tempo.style.color="green"
+	}
+	else{
+		cont=0;
+		tempo.innerHTML="VOCÊ ERROU " +d;
+		tempo.style.color="red";
+	}
+ }
+ 
+ 
+ function novo(){
+	cont=11;
+	texto.disabled=false;
+	tempo.innerText="";
+	nume1=Math.round( Math.random( ) * 100);
+	nume2=Math.round( Math.random( ) * 100);
+	nume3=Math.round( Math.random( ) * 100);
+	num1.innerText="";
+	num2.innerText="";
+	num3.innerText="";
+	r = document.getElementById("texto").value;
+    d=(nume1*nume2)+nume3;
+	tempo.style.color="black";
+
+ }
+
+</script>
+<style>
+  #tempo {
+	text-align: center;
+	font:bold 20pt arial;
+	display: block;
+	margin-bottom:-20px;
+	margin-top:20px;
+  }
+  
+   #num1{
+		display:inline;
+		position:relative;
+		font-size:25px;
+	}
+    #num2{
+		display:inline;
+		position:relative;
+		font-size:25px;
+	}
+	 #num3{
+		display:inline;
+		position:relative;
+		font-size:25px;
+	 }
+	 #texto{
+		margin-left:200px;
+	}
+	 #envia{
+		margin-left:170px;
+	 }
+	 #inicia{
+		margin-left:40px;
+		margin-top:-30px;
+	}
+	 #num1{
+		margin-left:200px;
+		margin-top:10px;
+	}
+	 #numero h1{
+		margin-bottom:-10px;
+		color:black;
+
+}
+</style>
+
+<div id="numero">
+	<h1 id="numero1">Acerte o resultado</h1>
+	<div id="num1"></div><div id="num2">
+	</div>
+		<div id="num3">
+		</div>
+			<form name="jogo1" id="jogo1" action="" method="post">
+				<input class="campo" type="text" id="texto"/>
+				<input class="botao" id="envia" type="button" value="ENVIAR RESPOSTA" onclick="verifica()"/>
+					<div id="tempo" >
+					</div>
+						<p>
+				<input type="button" id="inicia" class="botao" value="INICIAR JOGO" onclick="start();result();"/>
+				<input type="button" class="botao" id="denovo" value="TENTAR NOVAMENTE" onclick="novo();"/>
+				</p><input type="button" class="regra"  value="REGRAS DO JOGO "/>
+			</form>
+	</div>
+	<div class="background">
+	<div class="box">
+		<div class="close">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVGhD7ZnNTtRQAIXnoWiHyIoOhkRAXbjnKWSlCxJiXMCGF8AEYuLCaEyMG4MvIiQqG/5cMB0CjOHSW09JO3PaObeDc4npSb4FzMzpd9I2k3RaTZo0aXK/04vCp3EUfOtGYRx3QjMJ0mMlx+zNth9Do166nfA1O8AkSRzWoOOWXid8wgp90IumlqClx55CVuaHYBdaeiZ5zY8mOIOWHl7kD2jpYSU+gZYeVkKZf2DiuTZ/7Q6Blh5WMsT8jPnz5bO52n7jPOLixfMU9hoDWnpYSQHIm+PfKS4jrLg5PElRR0BLDyvJ03/39lbeZcStfPY5cQS09LCSPOfLz8z19/3CAEvViCF5i68BFpcR48hboKWHlTCUEePKW6Clh5WUUTXi4uXK2PIWaOlhJVWUjTBHp8W/a8hboKWHlYyidERGTXkLtPSwEoV0xI+DYfnkTNjLiX1GAVp6WIlCesMeDVzzQPmeKANaeljJKFL5wRt2gLojoKWHlVRB5ZMzcf3zV/F/CXVGQEsPKymDyuOGTe+JPe3Lrgpo6WEljCr57D13MQJaeljJIIp8RumInS1pBLT0sJI8LvIZlSPI+/NASw8rydP/+L4oMkI+g4243Nyg780DLT2spMDDadP/9MFJPiM/QpG3QEsPKxnCjkjOhIt8hh1xuf6KvsaAlh5W4hNo6WElPoGWHlbiE2jp+Q8eLQa7vMwHNR7u2kfavMwLC9Byi/1xgZRNlG4nWIVOvSSnb/Hv5RScsQP8G5JjReHXeLb9CBpNmjRpci/Tat0AOcsXW3RXjVwAAAAASUVORK5CYII=">
+		</div><h1>Regras do primeiro jogo</h1>
+		<ul>
+			<li>O programa irá gerar um número entre 0 e 10 automaticamente </li>
+			<li>Você pode colocar três números para tentar acertar</li>
+			<li>Depois de preencher os campos clique em jogar</li>
+		</ul>
+		<h1>Regras do segundo jogo</h1>
+		<ul>
+			<li>Para iniciar o jogo clique em "Iniciar jogo"</li>
+			<li>O programa irá gerar uma conta e você terá 10 segundos para responder</li>
+			<li>Após preencher o campo clique em enviar resposta</li>
+		</ul>
+	</div>
+</div>
+
+<style>
+/*Formatacao regras do jogo */
+
+
+.box{color:#FFFFF0 
+;
+	position:absolute;
+	top:80%;
+	left:18%;
+	width:500px;
+	height:350px;
+	background-color:#191970
+;
+	z-index:101;
+	padding:14px;
+	border-radius:4px;
+	box-shadow:2px 2px 2px #333333;
+	display:none;
+}
+.close{
+	float:right;margin-right:10px;
+	cursor:pointer;
+}
+.box h1{text-align:center;color:#FF0000
+}
+</style>
+<script>
+
+$('.regra').click(function(){
+		
+		$('.background, .box').css('display','block');
+	
+		$('.close').click(function(){
+			
+				$('.background,.box').css('display','none');
+			});
+		});
+
+
+
+</script>
+
+<style>
+.regra{margin-left:180px;margin-bottom:10px;text-align:center;height:30px;background-color:#FFA500;border-radius:3px;cursor:pointer;font-weight:bold;border-style:none}
+.regra:hover{background-color:#FFC125
+}
+
+
+	#galeria{
+		width:500px;
+		margin:0 auto;
+		padding:20px;
+		overflow:hidden;
+		list-style:none;
+	}
+	#galeria li{
+		float:left;
+		width:200px;
+		height:200px;
+		margin:10px;
+		border:5px solid #00688B;
+		background-color:white;
+		box-shadow:1px 1px 3px rgba(0,0,0,.4);
+		-webkit-transition:all .3s ease-in;
+	}
+	#galeria li:hover{
+		-webkit-transform:scale(1.2);
+	}
+	#galeria li span{
+		color:white;
+		text-shadow:1px 1px 1px #000000;
+		background-color:rgba(0,0,0,.3);
+		font:12px;
+		line-height:250px;
+		padding:0px;
+		margin-left:10px;
+	}
+	#foto1{
+		background:url('noticia1.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	
+	#foto2{
+		background:url('noticia2.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	
+	#foto3{
+		background:url('noticia3.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	
+	#foto4{
+		background:url('noticia4.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	
+	#foto5{
+		background:url('noticia5.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	#foto6{
+		background:url('noticia6.png');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	#foto7{
+		background:url('noticia7.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	#foto8{
+		background:url('noticia8.jpg');
+		background-position:50% 50%;
+		background-size:200px 200px;
+	}
+	.not1{
+		color:white;
+		margin-left:5px;
+		text-indent:5px;
+		margin-top:140px;
+		text-align:center;
+		font-family:bold;
+		font-size:22px;
+		text-shadow:1px 1px 1px #000000;
+		background-color:rgba(0,0,0,.3);
+		margin-right:5px;
+		margin-left:5px;
+	}
+</style>
+
+<h1 id="sexto">Notícias </h1>
+	<ul id="galeria">
+		<a href="http://computerworld.com.br/setor-de-tic-cresce-127-e-movimenta-r-1957-bilhoes-em-2017-no-brasil" target="_blank"><li id="foto1"><p class="not1">Mercado de Ti cresce 12,7%</p></li></a>
+		<a href="http://computerworld.com.br/microsoft-realiza-eventos-gratuitos-sobre-nuvem-para-desenvolvedores" target="_blank"><li id="foto2"><p class="not1">Microsoft realiza eventos gratuitos</p></li></a>
+		<a href="http://computerworld.com.br/samsung-promove-cursos-gratuitos-de-seguranca-e-desenvolvimento-de-apps" target="_blank"><li id="foto3"><p class="not1">Sansung promove cursos gratuitos</p></li></a>
+		<a href="http://computerworld.com.br/seja-responsavel-pela-seguranca" target="_blank"><li id="foto4"><p class="not1">Seja responsável pela segurança</p></li></a>
+		<a href="http://computerworld.com.br/intel-desiste-de-projeto-de-oculos-inteligentes" target="_blank"><li id="foto5"><p class="not1">Intel desiste de projeto</p></li></a>
+		<a href="http://computerworld.com.br/app-gratuito-do-google-ensina-programacao-com-javascript" target="_blank"><li id="foto6"><p class="not1">App para aprender JavaScript</p></li></a>
+		<a href="http://computerworld.com.br/olx-busca-11-profissionais-de-ti" target="_blank"><li id="foto7"><p class="not1">OLX busca 11 profissionais de TI</p></li></a>
+		<a href="http://computerworld.com.br/intel-cria-divisao-focada-em-seguranca-de-dados" target="_blank"><li id="foto8"><p class="not1">Intel e segurança de dados</p></li></a>
+
+	</ul>
+
+
+</aside>
+</section>
+
+
+<style>
+#perfil{
+	width:800px;border:1px solid;
+	margin:0 auto;
+	list-style:none;
+	border-radius:10px;
+	background-color:#F0FFF0
+	}
+	
+#perfil li{
+	width:100px;
+	height:100px;
+	border:3px solid black;
+	background-color:white;border-radius:115px;margin-left:320px;margin-top:25px;
+}
+#perfil p{
+	font-weight:bold;
+	font-size:20px;
+}
+
+#not1{
+	background:url('historia1.jpg');
+	background-position:48% 52%;
+}
+#not2{
+	background:url('historia2.jpg');
+	background-position:48% 52%;
+}
+#not3{
+	background:url('historia3.jpg');
+	background-position:48% 52%;
+}
+</style>
+
+<footer id="rodape">
+<div id="fim">
+	<h1 id="setimo">Nossa História</h1>
+		<ul id="perfil">
+			<li id="not1"></li><p>Em 2010, o Grupo empresarial entrou no mercado brasileiro </p>
+			<li id="not2"></li><p>Em 2013 criamos nosso primeiro software o LBDJT30000</p>
+			<li id="not3"></li><p>Atualmente somos um dos lideres no mercado de Software</p>
+		</ul><br/><br/>
+	
+</div>
+<div id="preto">
+<p> &copy;	Levis_maciel@hotmail.com <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2018</p>
+</footer>
+</div>
+</div>
+</body>
+</html>
